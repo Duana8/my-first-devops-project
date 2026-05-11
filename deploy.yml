@@ -1,0 +1,8 @@
+---
+- name: Deploy My Devops Project
+  hosts: local
+  tasks:
+    - name: Pull and start services using Docker Compose
+      command: docker-compose up -d
+      args:
+        chdir: "{{ ansible_env.PWD }}"

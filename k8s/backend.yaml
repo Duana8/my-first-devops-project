@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend-container
+        image: dsad2/my-backend:latest
+	imagePullPolicy: Always # <--- ВОТ ОНА, МАГИЯ!
+        ports:
+        - containerPort: 80
+	env:
+        - name: ConnectionStrings__DefaultConnection
+          value: "Host=postgres-service;Port=5432;Username=postgres;Password=your_password;Database=postgres"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
