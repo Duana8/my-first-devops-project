@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "hqbFqvrmyOQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\Desktop\\my-devops-project\\backend\\backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.0\\microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\npgsql\\10.0.2\\npgsql.10.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
