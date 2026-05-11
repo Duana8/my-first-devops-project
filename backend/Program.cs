@@ -12,7 +12,7 @@ app.MapGet("/api/status", async () => {
         await conn.OpenAsync();
         using var cmd = new NpgsqlCommand("SELECT 'Connection Successful at ' || NOW();", conn);
         var result = await cmd.ExecuteScalarAsync();
-        return Results.Ok(new { message = "Backend & DB are working!", dbTime = result });
+        return Results.Ok(new { message = "Backend & DB are working!!!", dbTime = result });
     }
     catch (Exception ex) {
         return Results.Problem($"Database Error: {ex.Message}");
